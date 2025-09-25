@@ -17,9 +17,9 @@ This toolkit follows a systematic approach to help with IaC migration:
 - **jq** JSON processor: `brew install jq` (macOS) or `apt install jq` (Ubuntu)
 - Bash shell environment
 
-## 🎯 Main Toolkit Script (Start Here)
+## Main Toolkit Script (Start Here)
 
-### 🚀 `aws-iac-toolkit.sh`
+### `aws-iac-toolkit.sh`
 **New!** Unified entry point with guided workflow - the easiest way to use this toolkit.
 
 ```bash
@@ -30,7 +30,7 @@ This toolkit follows a systematic approach to help with IaC migration:
 ./aws-iac-toolkit.sh help                        # Show help
 ```
 
-### 🔍 `validate-setup.sh`
+### `validate-setup.sh`
 **New!** Validates your setup and checks all prerequisites before running the toolkit.
 
 ```bash
@@ -41,7 +41,7 @@ This toolkit follows a systematic approach to help with IaC migration:
 
 ## Core Scripts
 
-### 🔍 `discover-aws-resources.sh`
+### `discover-aws-resources.sh`
 Discovers all AWS resources across your account and region.
 
 ```bash
@@ -59,7 +59,7 @@ Discovers all AWS resources across your account and region.
 
 **Covers:** EC2, VPC, RDS, S3, ECS, IAM, CloudWatch, ACM, Secrets Manager, and more.
 
-### 📊 `analyze-terraform-state.sh`
+### `analyze-terraform-state.sh`
 Analyzes Terraform state files to identify currently managed resources.
 
 ```bash
@@ -74,7 +74,7 @@ Analyzes Terraform state files to identify currently managed resources.
 - `terraform-resources-YYYYMMDD-HHMMSS.txt` - Human-readable consolidated report
 - `terraform-resources-YYYYMMDD-HHMMSS.json` - Machine-readable consolidated data
 
-### 🔄 `compare-resources.sh`
+### `compare-resources.sh`
 Compares AWS resources with Terraform-managed resources to find gaps.
 
 ```bash
@@ -88,7 +88,7 @@ Compares AWS resources with Terraform-managed resources to find gaps.
 **Output:**
 - `unmanaged-resources-YYYYMMDD-HHMMSS.txt` - List of unmanaged resources
 
-### 🌐 `compare_us_east_1.sh`
+### `compare_us_east_1.sh`
 Specialized comparison for us-east-1 resources (CloudFront, ACM certificates).
 
 ```bash
@@ -98,7 +98,7 @@ Specialized comparison for us-east-1 resources (CloudFront, ACM certificates).
 **Output:**
 - `unmanaged-us-east-1-resources-YYYYMMDD-HHMMSS.txt`
 
-### 📤 `extract_us_east_resources.sh`
+### `extract_us_east_resources.sh`
 Extracts us-east-1 specific resources from Terraform state.
 
 ```bash
@@ -162,15 +162,15 @@ All scripts now support enhanced help and options:
 
 ## Enhanced Features
 
-- ✅ **Read-only operations**: Enhanced safety wrappers prevent accidental AWS modifications
-- ✅ **Comprehensive validation**: JSON, credentials, dependencies, and file permissions
-- ✅ **Colorized logging**: Debug, info, warning, and error levels with color coding
-- ✅ **Progress indicators**: Visual feedback for long-running operations
-- ✅ **Guided workflow**: Step-by-step process with the main toolkit script
-- ✅ **Smart file detection**: Improved logic for finding state files vs generated reports
-- ✅ **Help system**: Every script supports `--help` with detailed usage
-- ✅ **Setup validation**: `validate-setup.sh` checks all prerequisites
-- ✅ **Error recovery**: Scripts handle failures gracefully and continue processing
+- **Read-only operations**: Enhanced safety wrappers prevent accidental AWS modifications
+- **Comprehensive validation**: JSON, credentials, dependencies, and file permissions
+- **Colorized logging**: Debug, info, warning, and error levels with color coding
+- **Progress indicators**: Visual feedback for long-running operations
+- **Guided workflow**: Step-by-step process with the main toolkit script
+- **Smart file detection**: Improved logic for finding state files vs generated reports
+- **Help system**: Every script supports `--help` with detailed usage
+- **Setup validation**: `validate-setup.sh` checks all prerequisites
+- **Error recovery**: Scripts handle failures gracefully and continue processing
 
 ## Resource Coverage
 
