@@ -1,0 +1,72 @@
+# Generated AWS resource files - contain sensitive resource data
+aws-resources-*.json
+aws-resources-*.txt
+terraform-resources-*.json
+terraform-resources-*.txt
+unmanaged-resources-*.txt
+unmanaged-us-east-1-resources-*.txt
+terraform-us-east-1.json
+
+# Environment-specific Terraform state files
+# These often contain sensitive resource IDs and configurations
+# Uncomment the patterns below if you want to prevent accidental commits
+# *.json
+# !package*.json
+# !.vscode/*.json
+
+# Common Terraform state file patterns (recommended to exclude)
+terraform.tfstate*
+*.tfstate
+*.tfstate.backup
+
+# Terraform plans
+*.tfplan
+
+# Temporary files created during script execution
+/tmp/*.json
+temp-*.json
+
+# Log files
+*.log
+.aws-iac-toolkit.log
+
+# AWS CLI debug logs
+aws-cli-*.log
+
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux system files
+*~
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+*~
+
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# Node modules (in case of package.json)
+node_modules/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Archives that might contain sensitive data
+*.zip
+*.tar.gz
+*.tgz
